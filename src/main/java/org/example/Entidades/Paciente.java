@@ -2,12 +2,12 @@ package org.example.Entidades;
 
 import java.time.LocalDate;
 
-public class Pasciente extends Pessoa{
+public class Paciente extends Pessoa{
 
     private int telefoneDeContato;
     private String email;
 
-    public Pasciente(String nome, LocalDate dataDeNascimento, int cpf, int rg, String genero, String nacionalidade, double peso, double altura, String estadoCivil, String etinia, int telefoneDeContato, String email) {
+    public Paciente(String nome, LocalDate dataDeNascimento, int cpf, int rg, String genero, String nacionalidade, double peso, double altura, String estadoCivil, String etinia, int telefoneDeContato, String email) {
         super(nome, dataDeNascimento, cpf, rg, genero, nacionalidade, peso, altura, estadoCivil, etinia);
         this.telefoneDeContato = telefoneDeContato;
         this.email = email;

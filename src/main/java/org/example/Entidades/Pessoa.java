@@ -1,11 +1,11 @@
 package org.example.Entidades;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Pessoa {
 
-    Enderecos enderecos = new Enderecos();
-
+    private List<Enderecos> enderecos;
     private String nome;
     private LocalDate dataDeNascimento;
     private int cpf;
@@ -16,8 +16,6 @@ public class Pessoa {
     private double altura;
     private String estadoCivil;
     private String etinia;
-
-
 
     public Pessoa(String nome, LocalDate dataDeNascimento, int cpf, int rg, String genero, String nacionalidade, double peso, double altura, String estadoCivil, String etinia) {
         this.nome = nome;
@@ -31,7 +29,14 @@ public class Pessoa {
         this.estadoCivil = estadoCivil;
         this.etinia = etinia;
 
+    }
 
+    public List<Enderecos> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Enderecos> enderecos) {
+        this.enderecos = enderecos;
     }
 
     public String getNome() {
