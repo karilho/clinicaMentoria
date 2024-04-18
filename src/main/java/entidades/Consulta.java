@@ -3,6 +3,7 @@ package entidades;
 import java.time.LocalDateTime;
 
 public class Consulta {
+    private Atendente atendente;
     private LocalDateTime DataHora;
     private Medico medico;
     private Paciente paciente;
@@ -12,8 +13,9 @@ public class Consulta {
     private String diagnostico;
     private String prescricao;
 
-    public Consulta(LocalDateTime dataHora, Medico medico, Paciente paciente, String tipo, String status, double preco, String diagnostico, String prescricao) {
-        DataHora = dataHora;
+    public Consulta(Atendente atendente, LocalDateTime dataHora, Medico medico, Paciente paciente, String tipo, String status, double preco, String diagnostico, String prescricao) {
+        this.atendente = atendente;
+        this.DataHora = dataHora;
         this.medico = medico;
         this.paciente = paciente;
         this.tipo = tipo;
@@ -21,6 +23,14 @@ public class Consulta {
         this.preco = preco;
         this.diagnostico = diagnostico;
         this.prescricao = prescricao;
+    }
+
+    public Atendente getAtendente() {
+        return atendente;
+    }
+
+    public void setAtendente(Atendente atendente) {
+        this.atendente = atendente;
     }
 
     public LocalDateTime getDataHora() {
