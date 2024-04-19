@@ -5,13 +5,40 @@ import java.util.ArrayList;
 
 public class Enderecos {
 
-    ArrayList<String> listaDeEnderecos;
+    private int numeroDaCasa;
+    private String nomeDoBairro;
+    private String nomeDaRua;
+    private String nomeDoPaís;
 
-    public ArrayList<String> getListaDeEnderecos() {
-        return listaDeEnderecos;
+    public int getNumeroDaCasa() {
+        return numeroDaCasa;
     }
 
-    public void setListaDeEnderecos(ArrayList<String> listaDeEnderecos) {
-        this.listaDeEnderecos = listaDeEnderecos;
+    public void setNumeroDaCasa(int numeroDaCasa) {
+        this.numeroDaCasa = numeroDaCasa;
+    }
+
+    public String getNomeDoBairro() {
+        return nomeDoBairro;
+    }
+
+    public void setNomeDoBairro(String nomeDoBairro) {
+        this.nomeDoBairro = nomeDoBairro;
+    }
+
+    public String getNomeDaRua() {
+        return nomeDaRua;
+    }
+
+    public void setNomeDaRua(String nomeDaRua) {
+        this.nomeDaRua = nomeDaRua;
+    }
+
+    public String getNomeDoPaís() {
+        return nomeDoPaís;
+    }
+
+    public void setNomeDoPaís(String nomeDoPaís) {
+        this.nomeDoPaís = nomeDoPaís;
     }
 }

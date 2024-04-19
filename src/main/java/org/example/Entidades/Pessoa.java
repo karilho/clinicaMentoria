@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Pessoa {
 
-    private List<Enderecos> enderecos;
+    private List<Enderecos> listaDeEnderecos;
     private String nome;
     private LocalDate dataDeNascimento;
     private int cpf;
@@ -16,8 +16,9 @@ public class Pessoa {
     private double altura;
     private String estadoCivil;
     private String etinia;
+    private String email;
 
-    public Pessoa(String nome, LocalDate dataDeNascimento, int cpf, int rg, String genero, String nacionalidade, double peso, double altura, String estadoCivil, String etinia) {
+    public Pessoa(String nome, LocalDate dataDeNascimento, int cpf, int rg, String genero, String nacionalidade, double peso, double altura, String estadoCivil, String etinia, String email, List<Enderecos> listaDeEnderecos) {
         this.nome = nome;
         this.dataDeNascimento = dataDeNascimento;
         this.cpf = cpf;
@@ -28,15 +29,18 @@ public class Pessoa {
         this.altura = altura;
         this.estadoCivil = estadoCivil;
         this.etinia = etinia;
+        this.email = email;
+        this.listaDeEnderecos = listaDeEnderecos;
 
     }
 
-    public List<Enderecos> getEnderecos() {
-        return enderecos;
+    public List<Enderecos> getListaDeEnderecos() {
+        return listaDeEnderecos;
     }
 
-    public void setEnderecos(List<Enderecos> enderecos) {
-        this.enderecos = enderecos;
+    public void setEnderecos(List<Enderecos> listaDeEnderecos) {
+        this.listaDeEnderecos = listaDeEnderecos;
+        this.listaDeEnderecos = listaDeEnderecos;
     }
 
     public String getNome() {
@@ -117,5 +121,13 @@ public class Pessoa {
 
     public void setEtinia(String etinia) {
         this.etinia = etinia;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
