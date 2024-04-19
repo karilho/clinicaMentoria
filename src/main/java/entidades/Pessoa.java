@@ -7,7 +7,7 @@ public class Pessoa {
     private String nome;
     private int idade;
     private char genero;
-    private int cpf;
+    private long cpf;
     private String rg;
     private LocalDate dataDeNascimento;
     private ArrayList<Endereco> listaDeEnderecos;
@@ -17,8 +17,10 @@ public class Pessoa {
     private String estadoCivil;
     private String etnia;
     private String profissao;
+    private long numeroCelular;
+    private long numeroTelefoneFixo;
 
-    public Pessoa(String nome, int idade, char genero, int cpf, String rg, LocalDate dataDeNascimento, ArrayList<Endereco> listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao) {
+    public Pessoa(String nome, int idade, char genero, long cpf, String rg, LocalDate dataDeNascimento, ArrayList<Endereco> listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao, long numeroCelular, long numeroTelefoneFixo) {
         this.nome = nome;
         this.idade = idade;
         this.genero = genero;
@@ -32,8 +34,28 @@ public class Pessoa {
         this.estadoCivil = estadoCivil;
         this.etnia = etnia;
         this.profissao = profissao;
+        this.numeroCelular = numeroCelular;
+        this.numeroTelefoneFixo = numeroTelefoneFixo;
     }
 
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", genero=" + genero +
+                ", cpf=" + cpf +
+                ", rg='" + rg + '\'' +
+                ", dataDeNascimento=" + dataDeNascimento +
+                ", listaDeEnderecos=" + listaDeEnderecos +
+                ", altura=" + altura +
+                ", peso=" + peso +
+                ", nacionalidade='" + nacionalidade + '\'' +
+                ", estadoCivil='" + estadoCivil + '\'' +
+                ", etnia='" + etnia + '\'' +
+                ", profissao='" + profissao + '\'' +
+                '}';
+    }
 
     public String getNome() {
         return nome;
@@ -59,11 +81,11 @@ public class Pessoa {
         this.genero = genero;
     }
 
-    public int getCpf() {
+    public long getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(long cpf) {
         this.cpf = cpf;
     }
 
@@ -137,5 +159,21 @@ public class Pessoa {
 
     public void setProfissao(String profissao) {
         this.profissao = profissao;
+    }
+
+    public long getNumeroCelular() {
+        return numeroCelular;
+    }
+
+    public void setNumeroCelular(long numeroCelular) {
+        this.numeroCelular = numeroCelular;
+    }
+
+    public long getNumeroTelefoneFixo() {
+        return numeroTelefoneFixo;
+    }
+
+    public void setNumeroTelefoneFixo(long numeroTelefoneFixo) {
+        this.numeroTelefoneFixo = numeroTelefoneFixo;
     }
 }

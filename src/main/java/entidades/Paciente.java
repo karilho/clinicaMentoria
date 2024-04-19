@@ -5,14 +5,20 @@ import java.util.ArrayList;
 
 public class Paciente extends Pessoa {
     private String carteiraDeSaude;
-    private int telefone;
     private String email;
 
-    public Paciente(String nome, int idade, char genero, int cpf, String rg, LocalDate dataDeNascimento, ArrayList<Endereco> listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao, int telefone, String email, String carteiraDeSaude) {
-        super(nome, idade, genero, cpf, rg, dataDeNascimento, listaDeEnderecos, altura, peso, nacionalidade, estadoCivil, etnia, profissao);
-        this.telefone = telefone;
+    public Paciente(String nome, int idade, char genero, long cpf, String rg, LocalDate dataDeNascimento, ArrayList<Endereco> listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao, long numeroCelular, long numeroTelefoneFixo, String email, String carteiraDeSaude) {
+        super(nome, idade, genero, cpf, rg, dataDeNascimento, listaDeEnderecos, altura, peso, nacionalidade, estadoCivil, etnia, profissao, numeroCelular, numeroTelefoneFixo);
         this.email = email;
         this.carteiraDeSaude = carteiraDeSaude;
+    }
+
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "carteiraDeSaude='" + carteiraDeSaude + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 
     public String getCarteiraDeSaude() {
@@ -21,14 +27,6 @@ public class Paciente extends Pessoa {
 
     public void setCarteiraDeSaude(String carteiraDeSaude) {
         this.carteiraDeSaude = carteiraDeSaude;
-    }
-
-    public int getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(int telefone) {
-        this.telefone = telefone;
     }
 
     public String getEmail() {

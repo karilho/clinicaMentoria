@@ -25,6 +25,21 @@ public class Consulta {
         this.prescricao = prescricao;
     }
 
+    @Override
+    public String toString() {
+        return "Consulta{" +
+                "atendente=" + atendente +
+                ", DataHora=" + DataHora +
+                ", medico=" + medico +
+                ", paciente=" + paciente +
+                ", tipo='" + tipo + '\'' +
+                ", status='" + status + '\'' +
+                ", preco=" + preco +
+                ", diagnostico='" + diagnostico + '\'' +
+                ", prescricao='" + prescricao + '\'' +
+                '}';
+    }
+
     public Atendente getAtendente() {
         return atendente;
     }

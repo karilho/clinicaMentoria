@@ -8,11 +8,20 @@ public class Medico extends Pessoa {
     private double salario;
     private ArrayList<String> certificacoes;
 
-    public Medico(String nome, int idade, char genero, int cpf, String rg, LocalDate dataDeNascimento, ArrayList<Endereco> listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao, String especialidade, double salario, ArrayList<String> certificacoes) {
-        super(nome, idade, genero, cpf, rg, dataDeNascimento, listaDeEnderecos, altura, peso, nacionalidade, estadoCivil, etnia, profissao);
+    public Medico(String nome, int idade, char genero, int cpf, String rg, LocalDate dataDeNascimento, ArrayList<Endereco> listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao, long numeroCelular, long numeroTelefoneFixo, String especialidade, double salario, ArrayList<String> certificacoes) {
+        super(nome, idade, genero, cpf, rg, dataDeNascimento, listaDeEnderecos, altura, peso, nacionalidade, estadoCivil, etnia, profissao, numeroCelular, numeroTelefoneFixo);
         this.especialidade = especialidade;
         this.salario = salario;
         this.certificacoes = certificacoes;
+    }
+
+    @Override
+    public String toString() {
+        return "Medico{" +
+                "especialidade='" + especialidade + '\'' +
+                ", salario=" + salario +
+                ", certificacoes=" + certificacoes +
+                '}';
     }
 
     public String getEspecialidade() {

@@ -15,6 +15,17 @@ public class Endereco {
         this.numero = numero;
     }
 
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "estado='" + estado + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", rua='" + rua + '\'' +
+                ", numero=" + numero +
+                '}';
+    }
+
     public String getEstado() {
         return estado;
     }
