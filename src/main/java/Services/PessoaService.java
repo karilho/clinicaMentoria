@@ -1,17 +1,11 @@
 package Services;
 
 import entidades.*;
-
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class PessoaService {
-    Scanner scanner = new Scanner(System.in);
-
     public Medico criarNovoMedico(){
 
         LocalDate dataDeNascimentoMedico1 = LocalDate.of(1988, 2, 1);
@@ -41,10 +35,7 @@ public class PessoaService {
 
         return paciente1;
     }
-    public Atendente criarNovoAtendente(Medico medico1){
-
-        Medico medico = criarNovoMedico();
-        Atendente atendente1 = criarNovoAtendente(medico1);
+    public Atendente criarNovoAtendente(){
 
 
         LocalDate dataDeNascimentoAtendente1 = LocalDate.of(1988, 2, 1);
@@ -53,11 +44,8 @@ public class PessoaService {
         Endereco endereco1 = new Endereco("MG", "Belo Horizonte", "Bairro Joseph Alves", "Rua Manoel de castanha", 901);
         enderecoAtendente1.add(endereco1);
 
+        Atendente atendente1 = new Atendente("Aline Queiroz", 29, 'M', 198 - 295 - 838 - 80, "RJ-12423", dataDeNascimentoAtendente1, enderecoAtendente1, 1.60, 55.0, "Brasileira", "Solteira", "pardo", "Atendente de clinica médica", 3298856 - 7789, 3232 - 4578, "Atendente chefe", 3.500);
 
-        ArrayList<Consulta> consultas = new ArrayList<>();
-        Atendente atendente1 = new Atendente("Aline Queiroz", 29, 'M', 198-295-838-80, "RJ-12423", dataDeNascimentoAtendente1, enderecoAtendente1, 1.60, 55.0, "Brasileira", "Solteira", "pardo", "Atendente de clinica médica", 3298856-7789, 3232-4578,"" );
-        LocalDateTime diaDaConsulta1 = LocalDateTime.of(2024, 5, 13, 13, 0);
-        Consulta consulta1 = new Consulta(atendente1, diaDaConsulta1, medico1,  );
 
         return atendente1;
     }

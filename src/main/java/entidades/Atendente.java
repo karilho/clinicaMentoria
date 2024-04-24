@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Atendente extends Pessoa {
-
     private String cargo;
     private double salario;
 
