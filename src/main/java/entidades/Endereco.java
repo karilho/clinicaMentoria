@@ -1,6 +1,8 @@
 package entidades;
 
-public class Endereco {
+import java.util.ArrayList;
+
+public class Endereco extends ArrayList<Endereco> {
     private String estado;
     private String cidade;
     private String bairro;
@@ -65,4 +67,5 @@ public class Endereco {
     public void setNumero(int numero) {
         this.numero = numero;
     }
+
 }
