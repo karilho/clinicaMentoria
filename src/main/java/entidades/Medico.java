@@ -8,7 +8,7 @@ public class Medico extends Pessoa {
     private double salario;
     private ArrayList<String> certificacoes;
 
-    public Medico(String nome, int idade, char genero, int cpf, String rg, LocalDate dataDeNascimento, ArrayList<Endereco> listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao, long numeroCelular, long numeroTelefoneFixo, String especialidade, double salario, ArrayList<String> certificacoes) {
+    public Medico(String nome, int idade, char genero, int cpf, String rg, LocalDate dataDeNascimento, String listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao, String numeroCelular, String numeroTelefoneFixo, String especialidade, double salario, String certificacoes) {
         super(nome, idade, genero, cpf, rg, dataDeNascimento, listaDeEnderecos, altura, peso, nacionalidade, estadoCivil, etnia, profissao, numeroCelular, numeroTelefoneFixo);
         this.especialidade = especialidade;
         this.salario = salario;
