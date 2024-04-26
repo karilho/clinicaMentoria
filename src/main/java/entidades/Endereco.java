@@ -2,7 +2,7 @@ package entidades;
 
 import java.util.ArrayList;
 
-public class Endereco extends ArrayList<Endereco> {
+public class Endereco {
     private String estado;
     private String cidade;
     private String bairro;

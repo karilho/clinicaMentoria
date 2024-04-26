@@ -10,33 +10,37 @@ import java.util.ArrayList;
 public class Servicos {
     public void cadastrarPessoas() {
         LocalDate dataDeNascimentoPaciente1 = LocalDate.of(1934, Month.MARCH, 22);
-        Endereco enderecopaciente1 = new Endereco("Estado: São Paulo ", "Cidade: São Paulo ", "Bairro: Jardim Paulista ", "Rua: Avenida Paulista ", 1000);
-        Pessoa pessoapaciente1 = new Pessoa("Icaro", 18, 'M', 1544834462, "MG-091.013", dataDeNascimentoPaciente1, enderecopaciente1, 1.43, 49.7, "Brasil", "Solteiro", "Branco", "Traficante", 99649412, 32244400);
-        Paciente paciente1 = new Paciente();
         ArrayList<Endereco> listaDoEnderecoPaciente1 = new ArrayList<>();
+        ArrayList<Endereco> listaDoEnderecoPaciente2 = new ArrayList<>();
+        ArrayList<Endereco> listaDoEnderecoPaciente3 = new ArrayList<>();
+        Endereco enderecopaciente3 = new Endereco("Estado: Minas Gerais ", "Cidade: Belo Horizonte ", "Bairro: Savassi ", "Rua: Rua Pernambuco ", 13);
+        Endereco enderecopaciente1 = new Endereco("Estado: São Paulo ", "Cidade: São Paulo ", "Bairro: Jardim Paulista ", "Rua: Avenida Paulista ", 1000);
+        Endereco enderecopaciente2 = new Endereco("Estado: Rio de Janeiro ", "Cidade: Rio de Janeiro ", "Bairro: Copacabana ", "Rua: Avenida Atlântica ", 1702);
+
+
         listaDoEnderecoPaciente1.add(enderecopaciente1);
+        listaDoEnderecoPaciente2.add(enderecopaciente2);
+        listaDoEnderecoPaciente3.add(enderecopaciente3);
+
+
+        Pessoa pessoapaciente1 = new Pessoa("Icaro", 18, 'M', 1544834462, "MG-091.013", dataDeNascimentoPaciente1,listaDoEnderecoPaciente1, 1.43, 49.7, "Brasil", "Solteiro", "Branco", "Traficante", 99649412, 32244400);
+        Paciente paciente1 = new Paciente();
         paciente1.setPessoa(pessoapaciente1);
         paciente1.setEmail("icarodazini7@gmail.com");
         paciente1.setCarteiraDeSaude("unimed Facil");
         System.out.println("Paciente1: " + paciente1.getPessoa().getNome() + ", idade=" + paciente1.getPessoa().getIdade() + ", genero=" + paciente1.getPessoa().getGenero() + ", cpf=" + paciente1.getPessoa().getCpf() + ", rg=" + paciente1.getPessoa().getRg() + ", data de nascimento=" + paciente1.getPessoa().getDataDeNascimento() + ", endereços=" + paciente1.getPessoa().getListaDeEnderecos() + ", altura=" + paciente1.getPessoa().getAltura() + ", peso=" + paciente1.getPessoa().getPeso() + ", nacionalidade=" + paciente1.getPessoa().getNacionalidade() + ", estado civil=" + paciente1.getPessoa().getEstadoCivil() + ", etnia=" + paciente1.getPessoa().getEtnia() + ", profissao=" + paciente1.getPessoa().getProfissao() + ", numero de celular=" + paciente1.getPessoa().getNumeroCelular() + ", numero de telefone fixo=" + paciente1.getPessoa().getNumeroTelefoneFixo() + ", email=" + paciente1.getEmail() + ", Carteira De Saude=" + paciente1.getCarteiraDeSaude());
 
         LocalDate dataDeNascimentoPaciente2 = LocalDate.of(1994, Month.MARCH, 22);
-        Endereco enderecopaciente2 = new Endereco("Estado: Rio de Janeiro ", "Cidade: Rio de Janeiro ", "Bairro: Copacabana ", "Rua: Avenida Atlântica ", 1702);
-        Pessoa pessoapaciente2 = new Pessoa("Lucas", 67, 'M', 1346890032, "RJ-043.023", dataDeNascimentoPaciente2, enderecopaciente2, 1.87, 90.7, "Chile", "Noivo", "Branco", "Jovem aprendiz", 99870943, 32265840);
+        Pessoa pessoapaciente2 = new Pessoa("Lucas", 67, 'M', 1346890032, "RJ-043.023", dataDeNascimentoPaciente2, listaDoEnderecoPaciente2, 1.87, 90.7, "Chile", "Noivo", "Branco", "Jovem aprendiz", 99870943, 32265840);
         Paciente paciente2 = new Paciente();
-        ArrayList<Endereco> listaDoEnderecoPaciente2 = new ArrayList<>();
-        listaDoEnderecoPaciente2.add(enderecopaciente2);
         paciente2.setPessoa(pessoapaciente2);
         paciente2.setEmail("luansouzao@gmail.com");
         paciente2.setCarteiraDeSaude("unimed Complicada");
         System.out.println("Paciente2: " + paciente2.getPessoa().getNome() + ", idade=" + paciente2.getPessoa().getIdade() + ", genero=" + paciente2.getPessoa().getGenero() + ", cpf=" + paciente2.getPessoa().getCpf() + ", rg=" + paciente2.getPessoa().getRg() + ", data de nascimento=" + paciente2.getPessoa().getDataDeNascimento() + ", endereços=" + paciente2.getPessoa().getListaDeEnderecos() + ", altura=" + paciente2.getPessoa().getAltura() + ", peso=" + paciente2.getPessoa().getPeso() + ", nacionalidade=" + paciente2.getPessoa().getNacionalidade() + ", estado civil=" + paciente2.getPessoa().getEstadoCivil() + ", etnia=" + paciente2.getPessoa().getEtnia() + ", profissao=" + paciente2.getPessoa().getProfissao() + ", numero de celular=" + paciente2.getPessoa().getNumeroCelular() + ", numero de telefone fixo=" + paciente2.getPessoa().getNumeroTelefoneFixo() + ", email=" + paciente2.getEmail() + ", Carteira De Saude=" + paciente2.getCarteiraDeSaude());
 
         LocalDate dataDeNascimentoPaciente3 = LocalDate.of(1984, Month.MARCH, 22);
-        Endereco enderecopaciente3 = new Endereco("Estado: Minas Gerais ", "Cidade: Belo Horizonte ", "Bairro: Savassi ", "Rua: Rua Pernambuco ", 13);
-        Pessoa pessoapaciente3 = new Pessoa("pedro", 28, 'M', 1234685434, "MG-098.045", dataDeNascimentoPaciente3, enderecopaciente3, 1.69, 32.2, "França", "Casado", "Branco", "Programador", 99876123, 32248875);
+        Pessoa pessoapaciente3 = new Pessoa("pedro", 28, 'M', 1234685434, "MG-098.045", dataDeNascimentoPaciente3, listaDoEnderecoPaciente3, 1.69, 32.2, "França", "Casado", "Branco", "Programador", 99876123, 32248875);
         Paciente paciente3 = new Paciente();
-        ArrayList<Endereco> listaDoEnderecoPaciente3 = new ArrayList<>();
-        listaDoEnderecoPaciente3.add(enderecopaciente3);
         paciente3.setPessoa(pessoapaciente3);
         paciente3.setEmail("lucascarrilho@gmail.com");
         paciente3.setCarteiraDeSaude("unimed Dificil");
@@ -81,7 +85,7 @@ public class Servicos {
         LocalDate dataDeNascimentoAtendente1 = LocalDate.of(1994, Month.MAY, 17);
         LocalDateTime dataDaAgendaAtendente1 = LocalDateTime.of(2024, Month.JUNE, 7, 12, 30);
         Endereco enderecoAtendente1 = new Endereco("Estado: Pernambuco ", "Cidade: Recife ", "Bairro: Boa Viagem", "Rua: Avenida Boa Viagem ", 809);
-        Pessoa pessoaAtendente1 = new Pessoa("Italo", 34, 'M', 654789098, "RJ-743.651", dataDeNascimentoAtendente1, enderecoAtendente1, 1.96, 94.0, "Brasil", "Noivo", "Negro", "Engenheiro Civil", 99765456, 32245567);
+        Pessoa pessoaAtendente1 = new Pessoa("Italo", 34, 'M', 654789098, "RJ-743.651", dataDeNascimentoAtendente1, listaDoEnderecoMedico1, 1.96, 94.0, "Brasil", "Noivo", "Negro", "Engenheiro Civil", 99765456, 32245567);
         Atendente atendente1 = new Atendente();
         Consulta consultaAtendente1 = new Consulta(atendente1, dataDaAgendaAtendente1, medico1, paciente3, "Consulta pediatrica", "a caminho", 750.0, "inchaço no pancreas", "Tomar 1 comprimido por dia de timacrofilade");
         ArrayList<Endereco> listaEnderecoAtendente1 = new ArrayList<>();
@@ -102,7 +106,7 @@ public class Servicos {
             LocalDate dataDeNascimentoAtendente2 = LocalDate.of(1994, Month.MAY, 17);
             LocalDateTime dataDaAgendaAtendente2 = LocalDateTime.of(2024, Month.JUNE, 7, 12, 30);
             Endereco enderecoAtendente2 = new Endereco("Estado: Espírito Santo ", "Cidade: Vitória ", "Bairro: Jardim da Penha", "Rua: Avenida Fernando Ferrari ", 514);
-            Pessoa pessoaAtendente2 = new Pessoa("Italo", 34, 'M', 654789098, "RJ-743.651", dataDeNascimentoAtendente2, enderecoAtendente2, 1.96, 94.0, "Brasil", "Noivo", "Negro", "Engenheiro Civil", 99765456, 32245567);
+            Pessoa pessoaAtendente2 = new Pessoa("Italo", 34, 'M', 654789098, "RJ-743.651", dataDeNascimentoAtendente2, listaDoEnderecoMedico2, 1.96, 94.0, "Brasil", "Noivo", "Negro", "Engenheiro Civil", 99765456, 32245567);
             Atendente atendente2 = new Atendente();
             Consulta consultaAtendente2 = new Consulta(atendente2, dataDaAgendaAtendente2, medico2, paciente2, "Consulta pediatrica", "a caminho", 750.0, "inchaço no pancreas", "Tomar 1 comprimido por dia de timacrofilade");
             ArrayList<Endereco> listaEnderecoAtendente2 = new ArrayList<>();
