@@ -4,13 +4,11 @@ import java.util.ArrayList;
 
 public class Atendente {
     private Pessoa pessoa;
-    private ArrayList<Consulta> agenda;
     private String cargo;
     private double salario;
 
-    public Atendente(Pessoa pessoa, ArrayList<Consulta> agenda, String cargo, double salario) {
+    public Atendente(Pessoa pessoa, String cargo, double salario) {
         this.pessoa = pessoa;
-        this.agenda = agenda;
         this.cargo = cargo;
         this.salario = salario;
     }
@@ -23,7 +21,6 @@ public class Atendente {
     public String toString() {
         return "Atendente{" +
                 "pessoa=" + pessoa +
-                ", agenda=" + agenda +
                 ", cargo='" + cargo + '\'' +
                 ", salario=" + salario +
                 '}';
@@ -35,14 +32,6 @@ public class Atendente {
 
     public void setPessoa(Pessoa pessoa) {
         this.pessoa = pessoa;
-    }
-
-    public ArrayList<Consulta> getAgenda() {
-        return agenda;
-    }
-
-    public void setAgenda(ArrayList<Consulta> agenda) {
-        this.agenda = agenda;
     }
 
     public String getCargo() {
