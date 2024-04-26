@@ -1,27 +1,40 @@
 package entidades;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Medico extends Pessoa {
+public class Medico {
+    private Pessoa pessoa;
     private String especialidade;
     private double salario;
     private ArrayList<String> certificacoes;
 
-    public Medico(String nome, int idade, char genero, int cpf, String rg, LocalDate dataDeNascimento, String listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao, String numeroCelular, String numeroTelefoneFixo, String especialidade, double salario, String certificacoes) {
-        super(nome, idade, genero, cpf, rg, dataDeNascimento, listaDeEnderecos, altura, peso, nacionalidade, estadoCivil, etnia, profissao, numeroCelular, numeroTelefoneFixo);
+    public Medico(Pessoa pessoa, String especialidade, double salario, ArrayList<String> certificacoes) {
+        this.pessoa = pessoa;
         this.especialidade = especialidade;
         this.salario = salario;
         this.certificacoes = certificacoes;
     }
 
+    public Medico() {
+
+    }
+
     @Override
     public String toString() {
         return "Medico{" +
-                "especialidade='" + especialidade + '\'' +
+                "pessoa=" + pessoa +
+                ", especialidade='" + especialidade + '\'' +
                 ", salario=" + salario +
                 ", certificacoes=" + certificacoes +
                 '}';
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
     public String getEspecialidade() {

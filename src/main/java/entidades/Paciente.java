@@ -1,23 +1,35 @@
 package entidades;
 
-import java.time.LocalDate;
-
-public class Paciente extends Pessoa {
+public class Paciente {
+    private Pessoa pessoa;
     private String carteiraDeSaude;
     private String email;
 
-    public Paciente(String nome, int idade, char genero, long cpf, String rg, LocalDate dataDeNascimento, String[] listaDeEnderecos, double altura, double peso, String nacionalidade, String estadoCivil, String etnia, String profissao, String numeroCelular, String numeroTelefoneFixo, String email, String carteiraDeSaude) {
-        super(nome, idade, genero, cpf, rg, dataDeNascimento, listaDeEnderecos, altura, peso, nacionalidade, estadoCivil, etnia, profissao, numeroCelular, numeroTelefoneFixo);
-        this.email = email;
+    public Paciente(Pessoa pessoa, String carteiraDeSaude, String email) {
+        this.pessoa = pessoa;
         this.carteiraDeSaude = carteiraDeSaude;
+        this.email = email;
+    }
+
+    public Paciente() {
+
     }
 
     @Override
     public String toString() {
         return "Paciente{" +
-                "carteiraDeSaude='" + carteiraDeSaude + '\'' +
+                "pessoa=" + pessoa +
+                ", carteiraDeSaude='" + carteiraDeSaude + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
     public String getCarteiraDeSaude() {

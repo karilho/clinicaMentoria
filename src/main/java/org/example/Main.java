@@ -1,10 +1,11 @@
 package org.example;
-import java.util.Scanner;
+
+import servicos.Servicos;
 
 public class Main {
     public static void main(String[] args) {
+        Servicos servicos = new Servicos();
 
-
-
+        servicos.cadastrarPessoas();
     }
 }
