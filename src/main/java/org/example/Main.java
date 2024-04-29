@@ -1,11 +1,12 @@
 package org.example;
 
+import Services.PessoaService;
 import servicos.Servicos;
 
 public class Main {
     public static void main(String[] args) {
-        Servicos servicos = new Servicos();
+        PessoaService pessoaService = new PessoaService();
 
-        servicos.cadastrarPessoas();
+        pessoaService.cadastrarPessoa();
     }
 }
