@@ -1,7 +1,5 @@
 package entidades;
 
-import java.util.ArrayList;
-
 public class Endereco {
     private String estado;
     private String cidade;
