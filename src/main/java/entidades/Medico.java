@@ -5,14 +5,12 @@ import java.util.ArrayList;
 public class Medico {
     private Pessoa pessoa;
     private String especialidade;
-    private double salario;
-    private ArrayList<String> certificacoes;
+    private double valorDaConsulta;
 
-    public Medico(Pessoa pessoa, String especialidade, double salario, ArrayList<String> certificacoes) {
+    public Medico(Pessoa pessoa, String especialidade, double valorDaConsulta) {
         this.pessoa = pessoa;
         this.especialidade = especialidade;
-        this.salario = salario;
-        this.certificacoes = certificacoes;
+        this.valorDaConsulta = valorDaConsulta;
     }
 
     public Medico() {
@@ -24,8 +22,7 @@ public class Medico {
         return "Medico{" +
                 "pessoa=" + pessoa +
                 ", especialidade='" + especialidade + '\'' +
-                ", salario=" + salario +
-                ", certificacoes=" + certificacoes +
+                ", salario=" + valorDaConsulta +
                 '}';
     }
 
@@ -45,19 +42,12 @@ public class Medico {
         this.especialidade = especialidade;
     }
 
-    public double getSalario() {
-        return salario;
+    public double getValorDaConsulta() {
+        return valorDaConsulta;
     }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
+    public void setValorDaConsulta(double valorDaConsulta) {
+        this.valorDaConsulta = valorDaConsulta;
     }
 
-    public ArrayList<String> getCertificacoes() {
-        return certificacoes;
-    }
-
-    public void setCertificacoes(ArrayList<String> certificacoes) {
-        this.certificacoes = certificacoes;
-    }
 }

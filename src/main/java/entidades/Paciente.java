@@ -3,16 +3,17 @@ package entidades;
 public class Paciente {
     private Pessoa pessoa;
     private String carteiraDeSaude;
-    private String email;
+    private Double poupanca;
 
-    public Paciente(Pessoa pessoa, String carteiraDeSaude, String email) {
+
+
+    public Paciente(Pessoa pessoa, String carteiraDeSaude, Double poupanca) {
         this.pessoa = pessoa;
         this.carteiraDeSaude = carteiraDeSaude;
-        this.email = email;
+        this.poupanca = poupanca;
     }
 
     public Paciente() {
-
     }
 
     @Override
@@ -20,7 +21,7 @@ public class Paciente {
         return "Paciente{" +
                 "pessoa=" + pessoa +
                 ", carteiraDeSaude='" + carteiraDeSaude + '\'' +
-                ", email='" + email + '\'' +
+                ", poupanca=" + poupanca +
                 '}';
     }
 
@@ -40,11 +41,11 @@ public class Paciente {
         this.carteiraDeSaude = carteiraDeSaude;
     }
 
-    public String getEmail() {
-        return email;
+    public Double getPoupanca() {
+        return poupanca;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPoupanca(Double poupanca) {
+        this.poupanca = poupanca;
     }
 }
