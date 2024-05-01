@@ -86,10 +86,8 @@ public class Servicos {
         Endereco enderecoAtendente1 = new Endereco("Estado: Pernambuco ", "Cidade: Recife ", "Bairro: Boa Viagem", "Rua: Avenida Boa Viagem ", 809);
         Pessoa pessoaAtendente1 = new Pessoa("Italo", 34, 'M', 654789098, "RJ-743.651", dataDeNascimentoAtendente1, listaDoEnderecoMedico1, 1.96, 94.0, "Brasil", "Noivo", "Negro", "Engenheiro Civil", 99765456, 32245567);
         Atendente atendente1 = new Atendente();
-        Consulta consultaAtendente1 = new Consulta(atendente1, dataDaAgendaAtendente1, medico1, paciente3, "Consulta pediatrica", "a caminho", 750.0, "inchaço no pancreas", "Tomar 1 comprimido por dia de timacrofilade");
         ArrayList<Endereco> listaEnderecoAtendente1 = new ArrayList<>();
         ArrayList<Consulta> agendaAtendente1 = new ArrayList<>();
-        agendaAtendente1.add(consultaAtendente1);
         listaEnderecoAtendente1.add(enderecoAtendente1);
         atendente1.setPessoa(pessoaAtendente1);
         atendente1.setSalario(3500.00);
@@ -101,10 +99,9 @@ public class Servicos {
         Endereco enderecoAtendente2 = new Endereco("Estado: Minas Gerais ", "Cidade: Belo Horizonte ", "Bairro: Savassi ", "Rua: Rua Pernambuco ", 13);
         Pessoa pessoaAtendente2 = new Pessoa("Icaro", 18, 'M', 1544834462, "MG-091.013", dataDeNascimentoAtendente2,listaDoEnderecoMedico2, 1.43, 49.7, "Brasil", "Solteiro", "Branco", "Traficante", 99649412, 32244400);
         Atendente atendente2 = new Atendente();
-        Consulta consultaAtendente2 = new Consulta(atendente2, dataDaAgendaAtendente2, medico2, paciente3, "Consulta pediatrica", "a caminho", 750.0, "inchaço no pancreas", "Tomar 1 comprimido por dia de timacrofilade");
+
         ArrayList<Endereco> listaEnderecoAtendente2 = new ArrayList<>();
         ArrayList<Consulta> agendaAtendente2 = new ArrayList<>();
-        agendaAtendente2.add(consultaAtendente2);
         listaEnderecoAtendente2.add(enderecoAtendente2);
         atendente2.setPessoa(pessoaAtendente2);
         atendente2.setSalario(3500.00);
