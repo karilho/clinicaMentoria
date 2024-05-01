@@ -7,22 +7,14 @@ public class Consulta {
     private LocalDateTime DataHora;
     private Medico medico;
     private Paciente paciente;
-    private String tipo;
-    private String status;
-    private double preco;
     private String diagnostico;
     private String prescricao;
 
-    public Consulta(Atendente atendente, LocalDateTime dataHora, Medico medico, Paciente paciente, String tipo, String status, double preco, String diagnostico, String prescricao) {
+    public Consulta(Atendente atendente, LocalDateTime dataHora, Medico medico, Paciente paciente) {
         this.atendente = atendente;
         this.DataHora = dataHora;
         this.medico = medico;
         this.paciente = paciente;
-        this.tipo = tipo;
-        this.status = status;
-        this.preco = preco;
-        this.diagnostico = diagnostico;
-        this.prescricao = prescricao;
     }
 
     @Override
@@ -32,9 +24,6 @@ public class Consulta {
                 ", DataHora=" + DataHora +
                 ", medico=" + medico +
                 ", paciente=" + paciente +
-                ", tipo='" + tipo + '\'' +
-                ", status='" + status + '\'' +
-                ", preco=" + preco +
                 ", diagnostico='" + diagnostico + '\'' +
                 ", prescricao='" + prescricao + '\'' +
                 '}';
@@ -70,30 +59,6 @@ public class Consulta {
 
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
     }
 
     public String getDiagnostico() {

@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Servicos {
     public void cadastrarPessoas() {
@@ -17,11 +18,9 @@ public class Servicos {
         Endereco enderecopaciente1 = new Endereco("Estado: São Paulo ", "Cidade: São Paulo ", "Bairro: Jardim Paulista ", "Rua: Avenida Paulista ", 1000);
         Endereco enderecopaciente2 = new Endereco("Estado: Rio de Janeiro ", "Cidade: Rio de Janeiro ", "Bairro: Copacabana ", "Rua: Avenida Atlântica ", 1702);
 
-
         listaDoEnderecoPaciente1.add(enderecopaciente1);
         listaDoEnderecoPaciente2.add(enderecopaciente2);
         listaDoEnderecoPaciente3.add(enderecopaciente3);
-
 
         Pessoa pessoapaciente1 = new Pessoa("Icaro", 18, 'M', 1544834462, "MG-091.013", dataDeNascimentoPaciente1,listaDoEnderecoPaciente1, 1.43, 49.7, "Brasil", "Solteiro", "Branco", "Traficante", 99649412, 32244400);
         Paciente paciente1 = new Paciente();
@@ -87,30 +86,34 @@ public class Servicos {
         Endereco enderecoAtendente1 = new Endereco("Estado: Pernambuco ", "Cidade: Recife ", "Bairro: Boa Viagem", "Rua: Avenida Boa Viagem ", 809);
         Pessoa pessoaAtendente1 = new Pessoa("Italo", 34, 'M', 654789098, "RJ-743.651", dataDeNascimentoAtendente1, listaDoEnderecoMedico1, 1.96, 94.0, "Brasil", "Noivo", "Negro", "Engenheiro Civil", 99765456, 32245567);
         Atendente atendente1 = new Atendente();
-        Consulta consultaAtendente1 = new Consulta(atendente1, dataDaAgendaAtendente1, medico1, paciente3, "Consulta pediatrica", "a caminho", 750.0, "inchaço no pancreas", "Tomar 1 comprimido por dia de timacrofilade");
         ArrayList<Endereco> listaEnderecoAtendente1 = new ArrayList<>();
         ArrayList<Consulta> agendaAtendente1 = new ArrayList<>();
-        agendaAtendente1.add(consultaAtendente1);
         listaEnderecoAtendente1.add(enderecoAtendente1);
         atendente1.setPessoa(pessoaAtendente1);
         atendente1.setSalario(3500.00);
         atendente1.setCargo("Otorrinolaringologista");
         System.out.println("Atendente1: " + atendente1.getPessoa().getNome() + ", idade=" + atendente1.getPessoa().getIdade() + ", genero=" + atendente1.getPessoa().getGenero() + ", cpf=" + atendente1.getPessoa().getCpf() + ", rg=" + atendente1.getPessoa().getRg() + ", data de nascimento=" + atendente1.getPessoa().getDataDeNascimento() + ", endereços=" + atendente1.getPessoa().getListaDeEnderecos() + ", altura=" + atendente1.getPessoa().getAltura() + ", peso=" + atendente1.getPessoa().getPeso() + ", nacionalidade=" + atendente1.getPessoa().getNacionalidade() + ", estado civil=" + atendente1.getPessoa().getEstadoCivil() + ", etnia=" + atendente1.getPessoa().getEtnia() + ", profissao=" + atendente1.getPessoa().getProfissao() + ", numero de celular=" + atendente1.getPessoa().getNumeroCelular() + ", numero de telefone fixo=" + atendente1.getPessoa().getNumeroTelefoneFixo() + ", cargo=" + atendente1.getCargo() + ", salario=" + atendente1.getSalario());
 
-
         LocalDate dataDeNascimentoAtendente2 = LocalDate.of(1994, Month.MAY, 17);
         LocalDateTime dataDaAgendaAtendente2 = LocalDateTime.of(2024, Month.JUNE, 7, 12, 30);
-        Endereco enderecoAtendente2 = new Endereco("Estado: Pernambuco ", "Cidade: Recife ", "Bairro: Boa Viagem", "Rua: Avenida Boa Viagem ", 809);
-        Pessoa pessoaAtendente2 = new Pessoa("Italo", 34, 'M', 654789098, "RJ-743.651", dataDeNascimentoAtendente2, listaDoEnderecoMedico2, 1.96, 94.0, "Brasil", "Noivo", "Negro", "Engenheiro Civil", 99765456, 32245567);
+        Endereco enderecoAtendente2 = new Endereco("Estado: Minas Gerais ", "Cidade: Belo Horizonte ", "Bairro: Savassi ", "Rua: Rua Pernambuco ", 13);
+        Pessoa pessoaAtendente2 = new Pessoa("Icaro", 18, 'M', 1544834462, "MG-091.013", dataDeNascimentoAtendente2,listaDoEnderecoMedico2, 1.43, 49.7, "Brasil", "Solteiro", "Branco", "Traficante", 99649412, 32244400);
         Atendente atendente2 = new Atendente();
-        Consulta consultaAtendente2 = new Consulta(atendente2, dataDaAgendaAtendente2, medico1, paciente3, "Consulta pediatrica", "a caminho", 750.0, "inchaço no pancreas", "Tomar 1 comprimido por dia de timacrofilade");
+
         ArrayList<Endereco> listaEnderecoAtendente2 = new ArrayList<>();
         ArrayList<Consulta> agendaAtendente2 = new ArrayList<>();
-        agendaAtendente2.add(consultaAtendente2);
         listaEnderecoAtendente2.add(enderecoAtendente2);
         atendente2.setPessoa(pessoaAtendente2);
         atendente2.setSalario(3500.00);
         atendente2.setCargo("Otorrinolaringologista");
         System.out.println("Atendente2: " + atendente2.getPessoa().getNome() + ", idade=" + atendente2.getPessoa().getIdade() + ", genero=" + atendente2.getPessoa().getGenero() + ", cpf=" + atendente2.getPessoa().getCpf() + ", rg=" + atendente2.getPessoa().getRg() + ", data de nascimento=" + atendente2.getPessoa().getDataDeNascimento() + ", endereços=" + atendente2.getPessoa().getListaDeEnderecos() + ", altura=" + atendente2.getPessoa().getAltura() + ", peso=" + atendente2.getPessoa().getPeso() + ", nacionalidade=" + atendente2.getPessoa().getNacionalidade() + ", estado civil=" + atendente2.getPessoa().getEstadoCivil() + ", etnia=" + atendente2.getPessoa().getEtnia() + ", profissao=" + atendente2.getPessoa().getProfissao() + ", numero de celular=" + atendente2.getPessoa().getNumeroCelular() + ", numero de telefone fixo=" + atendente2.getPessoa().getNumeroTelefoneFixo() + ", cargo=" + atendente2.getCargo() + ", salario=" + atendente2.getSalario());
     }
+
+    public void sitemaDeAgendamento(){
+        Scanner scanner = new Scanner(System.in);
+
+
+
+    }
+
 }
