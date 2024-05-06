@@ -1,13 +1,12 @@
 package entidades;
 
-import java.util.ArrayList;
-
 public class Medico {
+    private String nomeMedico;
     private Pessoa pessoa;
     private String especialidade;
     private double valorDaConsulta;
 
-    public Medico(Pessoa pessoa, String especialidade, double valorDaConsulta) {
+    public Medico(String especialidade) {
         this.pessoa = pessoa;
         this.especialidade = especialidade;
         this.valorDaConsulta = valorDaConsulta;
@@ -50,4 +49,10 @@ public class Medico {
         this.valorDaConsulta = valorDaConsulta;
     }
 
+    public String getNomeMedico() {
+        return nomeMedico;
+    }
+    public void setNomeMedico(String nomeMedico) {
+        this.nomeMedico = nomeMedico;
+    }
 }
