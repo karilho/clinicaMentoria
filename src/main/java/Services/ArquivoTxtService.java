@@ -9,7 +9,7 @@ public class ArquivoTxtService {
 
     public void criarArquivoTxt () throws IOException {
         Scanner scanner = new Scanner(System.in);
-        Path path = Path.of("C:\\Users\\icarodazini\\Documents\\Java\\ClinicaMentoria\\clinicaMentoria\\texto.txt");
+        Path path = Path.of("texto.txt");
 
         if (Files.notExists(path)){
             Files.createFile(path);
