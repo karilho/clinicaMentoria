@@ -1,12 +1,11 @@
 package entidades;
 
 public class Medico {
-    private String nomeMedico;
     private Pessoa pessoa;
     private String especialidade;
     private double valorDaConsulta;
 
-    public Medico(String especialidade) {
+    public Medico(Pessoa pessoa, String especialidade, double valorDaConsulta) {
         this.pessoa = pessoa;
         this.especialidade = especialidade;
         this.valorDaConsulta = valorDaConsulta;
@@ -47,12 +46,5 @@ public class Medico {
 
     public void setValorDaConsulta(double valorDaConsulta) {
         this.valorDaConsulta = valorDaConsulta;
-    }
-
-    public String getNomeMedico() {
-        return nomeMedico;
-    }
-    public void setNomeMedico(String nomeMedico) {
-        this.nomeMedico = nomeMedico;
     }
 }

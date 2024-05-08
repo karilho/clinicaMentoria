@@ -5,13 +5,11 @@ import java.time.LocalDateTime;
 public class Consulta {
 
     private LocalDateTime dataHora;
-    private String local;
     private Paciente paciente;
     private Medico medico;
 
-    public Consulta(LocalDateTime dataHora, String local, Paciente paciente, Medico medico) {
+    public Consulta(LocalDateTime dataHora, Paciente paciente, Medico medico) {
         this.dataHora = dataHora;
-        this.local = local;
         this.paciente = paciente;
         this.medico = medico;
     }
@@ -22,14 +20,6 @@ public class Consulta {
 
     public void setDataHora(LocalDateTime dataHora) {
         this.dataHora = dataHora;
-    }
-
-    public String getLocal() {
-        return local;
-    }
-
-    public void setLocal(String local) {
-        this.local = local;
     }
 
     public Paciente getPaciente() {
