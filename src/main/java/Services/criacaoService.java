@@ -30,7 +30,7 @@ public class criacaoService {
         System.out.println("Qual o valor da consulta do médico?");
         double valorDaConsulta = scanner.nextDouble();
 
-        Medico medico = new Medico(pessoa, especialidadeDoMedico, valorDaConsulta);
+        Medico medico = new Medico(especialidadeDoMedico);
 
         scanner.close();
 
@@ -46,7 +46,7 @@ public class criacaoService {
         System.out.println("Qual o valor da poupança do paciente?");
         Double poupanca = scanner.nextDouble();
 
-        Paciente paciente = new Paciente(pessoa, carteiraDeSaude, poupanca);
+        Paciente paciente = new Paciente(carteiraDeSaude);
         paciente.setPessoa(pessoa);
 
         scanner.close();

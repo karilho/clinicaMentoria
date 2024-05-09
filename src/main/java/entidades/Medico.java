@@ -1,7 +1,5 @@
 package entidades;
 
-import java.util.ArrayList;
-
 public class Medico {
     private Pessoa pessoa;
     private String especialidade;
@@ -49,5 +47,4 @@ public class Medico {
     public void setValorDaConsulta(double valorDaConsulta) {
         this.valorDaConsulta = valorDaConsulta;
     }
-
 }
