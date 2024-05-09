@@ -21,10 +21,6 @@ public class ArquivoTxtService {
         Files.writeString(path, texto);
         System.out.println("TEXTO ARMAZENADO COM SUCESSO NO ARQUIVO");
 
-        try {
-            criarArquivoTxt();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        scanner.close();
     }
 }

@@ -7,7 +7,7 @@ public class Paciente {
 
 
 
-    public Paciente(String carteiraDeSaude) {
+    public Paciente(String carteiraDeSaude, Pessoa pessoa, Double poupanca) {
         this.pessoa = pessoa;
         this.carteiraDeSaude = carteiraDeSaude;
         this.poupanca = poupanca;
