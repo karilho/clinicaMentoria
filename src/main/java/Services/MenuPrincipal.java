@@ -30,11 +30,11 @@ public class MenuPrincipal {
                 System.out.println(consultasList.toString());
                 break;
             case 3:
-                scanner.close();
                 Pessoa pessoaCriada = criacaoService.criarPessoa();
                 Paciente pacienteCriado = criacaoService.criarPaciente(pessoaCriada);
                 System.out.println("Paciente criado com sucesso!" + pacienteCriado.toString());
                  pacientesList.add(pacienteCriado);
+                 scanner.close();
                 return;
             case 4:
                 Pessoa pessoaCriada2 = criacaoService.criarPessoa();
@@ -54,7 +54,7 @@ public class MenuPrincipal {
         System.out.println("BEM VINDO AO SISTEMA DE GERENCIAMENTO DE CONSULTAS");
         System.out.println("1 - AGENDAR CONSULTA");
         System.out.println("2 - LISTAR CONSULTAS");
-        System.out.println("3 - CADASTRAR PACIENTE);");
+        System.out.println("3 - CADASTRAR PACIENTE");
         System.out.println("4 - CADASTRAR MEDICO");
         System.out.println("5 - SAIR DO SISTEMA");
         System.out.println("DIGITE A OPÇÃO DESEJADA");
