@@ -1,0 +1,1 @@
+Medico{pessoa=Pessoa{nome='CARRILHO DE ALMEIDA', idade=29}, especialidade='GAROTO DE PROGRAMA', salario=2.0}

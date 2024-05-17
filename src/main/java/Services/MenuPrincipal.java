@@ -5,12 +5,13 @@ import entidades.Medico;
 import entidades.Paciente;
 import entidades.Pessoa;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuPrincipal {
 
-    public void iniciarOSistemaDeCadastro() {
+    public void iniciarOSistemaDeCadastro() throws IOException {
         printarMenuPrincipal();
         criacaoService criacaoService = new criacaoService();
         Scanner scanner = new Scanner(System.in);
@@ -30,17 +31,18 @@ public class MenuPrincipal {
                 System.out.println(consultasList.toString());
                 break;
             case 3:
-                scanner.close();
                 Pessoa pessoaCriada = criacaoService.criarPessoa();
                 Paciente pacienteCriado = criacaoService.criarPaciente(pessoaCriada);
                 System.out.println("Paciente criado com sucesso!" + pacienteCriado.toString());
-                 pacientesList.add(pacienteCriado);
+                pacientesList.add(pacienteCriado);
+                scanner.close();
                 return;
             case 4:
                 Pessoa pessoaCriada2 = criacaoService.criarPessoa();
                 Medico medicoCriado = criacaoService.criarMedico(pessoaCriada2);
                 System.out.println("Paciente criado com sucesso!" + medicoCriado.toString());
                 medicosList.add(medicoCriado);
+                scanner.close();
                 return;
             case 5:
                 System.out.println("Saindo do sistema...");
@@ -54,7 +56,7 @@ public class MenuPrincipal {
         System.out.println("BEM VINDO AO SISTEMA DE GERENCIAMENTO DE CONSULTAS");
         System.out.println("1 - AGENDAR CONSULTA");
         System.out.println("2 - LISTAR CONSULTAS");
-        System.out.println("3 - CADASTRAR PACIENTE);");
+        System.out.println("3 - CADASTRAR PACIENTE");
         System.out.println("4 - CADASTRAR MEDICO");
         System.out.println("5 - SAIR DO SISTEMA");
         System.out.println("DIGITE A OPÇÃO DESEJADA");

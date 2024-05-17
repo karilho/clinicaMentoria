@@ -1,0 +1,1 @@
+Paciente{pessoa=Pessoa{nome='ABRANCHES DA SILVA', idade=90}, carteiraDeSaude='UNIMED DIFICIL', poupanca=10000.0}
