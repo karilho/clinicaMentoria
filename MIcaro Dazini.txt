@@ -1,0 +1,1 @@
+Medico{pessoa=Pessoa{nome='ICARO DAZINI', idade=23}, especialidade='CIRURGIAO', salario=34.6}

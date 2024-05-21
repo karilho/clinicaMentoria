@@ -5,12 +5,13 @@ import entidades.Medico;
 import entidades.Paciente;
 import entidades.Pessoa;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuPrincipal {
 
-    public void iniciarOSistemaDeCadastro() {
+    public void iniciarOSistemaDeCadastro() throws IOException {
         printarMenuPrincipal();
         criacaoService criacaoService = new criacaoService();
         Scanner scanner = new Scanner(System.in);
@@ -33,14 +34,15 @@ public class MenuPrincipal {
                 Pessoa pessoaCriada = criacaoService.criarPessoa();
                 Paciente pacienteCriado = criacaoService.criarPaciente(pessoaCriada);
                 System.out.println("Paciente criado com sucesso!" + pacienteCriado.toString());
-                 pacientesList.add(pacienteCriado);
-                 scanner.close();
+                pacientesList.add(pacienteCriado);
+                scanner.close();
                 return;
             case 4:
                 Pessoa pessoaCriada2 = criacaoService.criarPessoa();
                 Medico medicoCriado = criacaoService.criarMedico(pessoaCriada2);
                 System.out.println("Paciente criado com sucesso!" + medicoCriado.toString());
                 medicosList.add(medicoCriado);
+                scanner.close();
                 return;
             case 5:
                 System.out.println("Saindo do sistema...");
