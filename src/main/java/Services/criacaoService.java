@@ -24,7 +24,7 @@ public class criacaoService {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Qual a especialidade do médico?");
-        String especialidadeDoMedico = scanner.nextLine();
+        String especialidadeDoMedico = scanner.next();
 
         System.out.print("Qual o valor da consulta do médico?");
         double valorDaConsulta = scanner.nextDouble();
