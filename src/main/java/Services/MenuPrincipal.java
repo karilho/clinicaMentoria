@@ -14,7 +14,7 @@ public class MenuPrincipal {
     ArrayList <Medico> medicosList = new ArrayList<>();
     ArrayList <Consulta> consultasList = new ArrayList<>();
 
-    public void printarMenuPrincipal() {
+    public static void printarMenuPrincipal() {
         System.out.println("BEM VINDO AO SISTEMA DE GERENCIAMENTO DE CONSULTAS");
         System.out.println("1 - AGENDAR CONSULTA");
         System.out.println("2 - LISTAR CONSULTAS");
