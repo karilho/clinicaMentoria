@@ -3,6 +3,7 @@ package org.example;
 import Services.AgendarConsulta;
 import Services.ArquivoTxtService;
 import Services.MenuPrincipal;
+import Services.criacaoService;
 
 import java.io.IOException;
 
@@ -11,8 +12,11 @@ public class Main {
         //ArquivoTxtService arquivo = new ArquivoTxtService();
         //arquivo.criarArquivoTxt();
 
-        MenuPrincipal menu = new MenuPrincipal();
-        menu.iniciarOSistemaDeCadastro();
+
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.iniciarOSistemaDeCadastro();
+
+
 
     }
 }

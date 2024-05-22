@@ -8,14 +8,18 @@ public class criacaoService {
     public Pessoa criarPessoa() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite o nome:");
+        System.out.print("Digite o nome:");
         String nome = scanner.nextLine();
 
-        System.out.println("Digite a idade:");
+        System.out.print("Digite a idade:");
         int idade = scanner.nextInt();
 
-        System.out.println("Pessoa criada com sucesso!" + nome + " " + idade);
+        System.out.print("Pessoa criada com sucesso!" + nome + " " + idade);
+
+        scanner.close();
+
         return new Pessoa(nome, idade);
+
 
     }
 
@@ -28,13 +32,16 @@ public class criacaoService {
         String especialidadeDoMedico = scanner.next();
 
         System.out.print("Qual o valor da consulta do médico?");
+
         double valorDaConsulta = scanner.nextDouble();
 
         Medico medico = new Medico(pessoa, especialidadeDoMedico, valorDaConsulta);
+        medico.setPessoa(pessoa);
 
         scanner.close();
 
         return medico;
+
     }
 
     public Paciente criarPaciente(Pessoa pessoa) {
