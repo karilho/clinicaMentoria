@@ -4,18 +4,13 @@ public class Paciente {
     private Pessoa pessoa;
     private String carteiraDeSaude;
     private Double poupanca;
-
-
-
     public Paciente(String carteiraDeSaude, Pessoa pessoa, Double poupanca) {
         this.pessoa = pessoa;
         this.carteiraDeSaude = carteiraDeSaude;
         this.poupanca = poupanca;
     }
-
     public Paciente() {
     }
-
     @Override
     public String toString() {
         return "Paciente{" +
@@ -24,7 +19,6 @@ public class Paciente {
                 ", poupanca=" + poupanca +
                 '}';
     }
-
     public Pessoa getPessoa() {
         return pessoa;
     }

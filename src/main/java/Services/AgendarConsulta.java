@@ -9,9 +9,7 @@ import java.util.Scanner;
 
 public class AgendarConsulta {
 
-    Scanner scanner = new Scanner(System.in);
-
-    public Consulta agendarAConsulta(ArrayList<Paciente> listaDePacientes, ArrayList<Medico> listaDeMedicos) {
+    public Consulta agendarAConsulta(ArrayList<Paciente> listaDePacientes, ArrayList<Medico> listaDeMedicos, Scanner scanner) {
         System.out.println("Bem-vindo ao sistema de agendamento de consultas!");
 
         Medico medicoEncontrado = null;
@@ -21,7 +19,8 @@ public class AgendarConsulta {
         for (Medico medico : listaDeMedicos) {
             System.out.println(medico.getPessoa().getNome());
         }
-        String nomeMedico = scanner.nextLine();
+
+        String nomeMedico = scanner.next();
 
         for (Medico medico : listaDeMedicos) {
             if (medico.getPessoa().getNome().equals(nomeMedico)) {
@@ -38,7 +37,7 @@ public class AgendarConsulta {
         for (Paciente paciente : listaDePacientes) {
             System.out.println(paciente.getPessoa().getNome());
         }
-        String nomePaciente = scanner.nextLine();
+        String nomePaciente = scanner.next();
 
         for (Paciente paciente : listaDePacientes) {
             if (paciente.getPessoa().getNome().equals(nomePaciente)) {
@@ -92,7 +91,6 @@ public class AgendarConsulta {
         System.out.println("Consulta agendada com sucesso para " + horarioDaConsulta +
                 " com o médico " + nomeMedico + " Para o Paciente " + nomePaciente);
 
-        scanner.close();
         return consultaAgendada;
     }
 }

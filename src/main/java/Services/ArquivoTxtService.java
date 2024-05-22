@@ -7,12 +7,16 @@ import java.nio.file.Path;
 
 public class ArquivoTxtService {
 
-    public void criarArquivoTxt(String prefixo, String nome, String conteudo) throws IOException {
+    public void criarArquivoTxt(String prefixo, String nome, String conteudo)  {
         String cadastroDeCidadoes = prefixo + nome + ".txt";
         Path path = Path.of(cadastroDeCidadoes);
 
-        if (Files.notExists(path)) {
-            Files.createFile(path);
+        try{
+            if (Files.notExists(path)) {
+                Files.createFile(path);
+            }
+        } catch (IOException e) {
+            System.out.println("Erro ao criar o arquivo: " + e.getMessage());
         }
 
         try (FileWriter salvarCidadao = new FileWriter(path.toFile())) {
