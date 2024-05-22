@@ -26,41 +26,40 @@ public class MenuPrincipal {
     }
     public void iniciarOSistemaDeCadastro() {
         int opcao = 0;
-        while (opcao != 5) {
+        do {
             printarMenuPrincipal();
             opcao = scanner.nextInt();
-                switch (opcao){
-                    case 1:
-                        AgendarConsulta agendarConsulta = new AgendarConsulta();
-                        Consulta consultaAgendada = agendarConsulta.agendarAConsulta(pacientesList, medicosList);
-                        System.out.println("Consulta agendada com sucesso!" + consultaAgendada.toString());
-                        consultasList.add(consultaAgendada);
-                        break;
-                    case 2:
-                        System.out.println(consultasList.toString());
-                        break;
-                    case 3:
-                        Pessoa pessoaCriada = criacaoService.criarPessoa();
-                        Paciente pacienteCriado = criacaoService.criarPaciente(pessoaCriada);
-                        System.out.println("Paciente criado com sucesso!" + pacienteCriado.toString());
-                        pacientesList.add(pacienteCriado);
-                        break;
-                    case 4:
-                        Pessoa pessoaCriada2 = criacaoService.criarPessoa();
-                        Medico medicoCriado = criacaoService.criarMedico(pessoaCriada2);
-                        System.out.println("Médico criado com sucesso!" + medicoCriado.toString());
-                        medicosList.add(medicoCriado);
-                        break;
-                    case 5:
-                        System.out.println("Saindo do sistema...");
-                        if (scanner != null) {
-                            scanner.close();
-                        }
-                        break;
-                    default:
-                        System.out.println("Opção inválida. Tente novamente.");
-                }
+            switch (opcao) {
+                case 1:
+                    AgendarConsulta agendarConsulta = new AgendarConsulta();
+                    Consulta consultaAgendada = agendarConsulta.agendarAConsulta(pacientesList, medicosList, scanner);
+                    System.out.println("Consulta agendada com sucesso!" + consultaAgendada.toString());
+                    consultasList.add(consultaAgendada);
+                    break;
+                case 2:
+                    System.out.println(consultasList.toString());
+                    break;
+                case 3:
+                    Pessoa pessoaCriada = criacaoService.criarPessoa(scanner);
+                    Paciente pacienteCriado = criacaoService.criarPaciente(pessoaCriada, scanner);
+                    System.out.print("Paciente criado com sucesso!" + pacienteCriado.toString());
+                    pacientesList.add(pacienteCriado);
+                    break;
+                case 4:
+                    Pessoa pessoaCriada2 = criacaoService.criarPessoa(scanner);
+                    Medico medicoCriado = criacaoService.criarMedico(pessoaCriada2, scanner);
+                    System.out.print("Médico criado com sucesso!" + medicoCriado.toString());
+                    medicosList.add(medicoCriado);
+                    break;
+                case 5:
+                    System.out.println("Saindo do sistema...");
+                    scanner.close();
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
             }
-        }
+        } while (opcao != 5);
     }
+}
 
